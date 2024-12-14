@@ -17099,6 +17099,9 @@ with pkgs;
 
   manaplus = callPackage ../games/manaplus { stdenv = gcc11Stdenv; };
 
+  mcpelauncher-client = qt6Packages.callPackage ../games/mcpelauncher/client.nix { };
+  mcpelauncher-ui-qt = qt6Packages.callPackage ../games/mcpelauncher/ui.nix { };
+
   mindustry-wayland = callPackage ../by-name/mi/mindustry/package.nix {
     enableWayland = true;
   };
